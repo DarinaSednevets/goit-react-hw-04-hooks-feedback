@@ -1,0 +1,23 @@
+.list {
+  background: rgb(192, 53, 53);
+  display: flex;
+  flex-direction: row;
+}
+.btn {
+  margin: 5px;
+  background: beige;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #b4d884;
+}
+.btn:active {
+  background: #6e8550;
+}
