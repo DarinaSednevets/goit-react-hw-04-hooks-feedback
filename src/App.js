@@ -12,9 +12,6 @@ function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBAd] = useState(0);
 
-
-
-
   const countFeedbackHandler = event => {
     const { name } = event.currentTarget;
     switch (name) {
@@ -31,13 +28,6 @@ function App() {
         return;
     }
   };
-  // const countTotalFeedback = () => {
-  //   return good + neutral + bad;
-  // };
-  // const countPositiveFeedbackPercentage = () => {
-  //   let totalFeedback = countTotalFeedback();
-  //   let positiveFeedback = (good * 100) / totalFeedback;
-  //   return totalFeedback !== 0 ? Math.round(positiveFeedback) : 0;
 
   const countTotalFeedback = useMemo(() => {
     return good + neutral + bad;
@@ -49,9 +39,7 @@ function App() {
     return totalFeedback !== 0 ? Math.round(positiveFeedback) : 0;
   }, [countTotalFeedback, good]);
 
-  // useEffect(() => {
-  //   countPositiveFeedbackPercentage();
-  // }, [good, neutral, bad, countPositiveFeedbackPercentage])
+
 
   return (
     <>
